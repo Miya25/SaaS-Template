@@ -1,67 +1,34 @@
-# SaaS Ninja
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-SaaS Ninja is an opinionated Software as a Service Starter Kit to speed up your SaaS development and deployment, putting you on the fast track to crafting your one-of-a-kind software solution.
+## Getting Started
 
-## Features
-
-- [Next.js](https://nextjs.org) - Web development framework
-- [Tailwind CSS](https://tailwindcss.com) - CSS framework
-- [shadcn/ui](https://ui.shadcn.com/) - Components library
-- [NextAuth.js](https://next-auth.js.org/) - Authentication
-- [Prisma](https://www.prisma.io/) - ORM
-- [Zod](https://zod.dev/) - Validation
-
-## Running Locally
-
-Before you start you will need the following:
-
-- [Node.js](https://nodejs.org/en)
-- [Docker](https://www.docker.com/)
-- Optional: [pnpm](https://pnpm.io/)
-
-1. Clone the repo
+First, run the development server:
 
 ```bash
-git clone git@github.com:RishikeshNK/saas-ninja.git
-cd saas-ninja
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
 ```
 
-2. Install the necessary dependencies
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-pnpm install
-```
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-3. Configure the `.env` file by following the template in `.env.example`. See [Setting up the environment](#setting-up-the-environment).
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-4. Run the docker container
+## Learn More
 
-```bash
-docker compose up -d
-```
+To learn more about Next.js, take a look at the following resources:
 
-> **Note:** The `docker-compose.yml` file sets the `POSTGRES_USER` as "admin", `POSTGRES_PASSWORD` as "admin", and `POSTGRES_DB` as "saas-ninja" by default.
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-5. Generate the Prisma Client
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-```bash
-pnpm dlx prisma generate
-```
+## Deploy on Vercel
 
-6. Run the application
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-```bash
-pnpm run
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the results.
-
-### Setting up the environment
-
-1. Create a new file called `.env` or copy the `.env.example` and rename it to `.env`
-
-```bash
-cp .env.example .env
-```
-
-2. Complete the file to add your environment variables
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
