@@ -31,7 +31,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Button variant="outline" className="px-5 py-3" asChild>
-              <Link href="https://github.com/RishikeshNK/saas-ninja">
+              <Link href="https://github.dev/Miya25/SaaS-Template">
                 GitHub
               </Link>
             </Button>
