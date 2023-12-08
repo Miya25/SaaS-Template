@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "format": "prettier -w ./**/**/*.{ts,tsx,js,jsx}"
   },
   "lint-staged": {
     "**/*.(ts|tsx|js)": [

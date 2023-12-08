@@ -1,26 +1,26 @@
-'use client'
+"use client";
 
-import React from 'react'
+import React from "react";
 
-import Link from 'next/link'
+import Link from "next/link";
 import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-import ModeToggle from './mode-toggle'
-import { Swords } from 'lucide-react'
-import { Button } from './ui/button'
+} from "@/components/ui/navigation-menu";
+import ModeToggle from "./mode-toggle";
+import { Swords } from "lucide-react";
+import { Button } from "./ui/button";
 
 export default function Navbar() {
   const navItems = [
-    { label: 'Features', href: '/#features' },
-    { label: 'Pricing', href: '/#pricing' },
-    { label: 'Blog', href: '/#blog' },
-    { label: 'Documentation', href: '/#docs' },
-  ]
+    { label: "Features", href: "/#features" },
+    { label: "Pricing", href: "/#pricing" },
+    { label: "Blog", href: "/#blog" },
+    { label: "Documentation", href: "/#docs" },
+  ];
 
   return (
     <div className="flex items-center justify-between py-4">
@@ -53,5 +53,5 @@ export default function Navbar() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

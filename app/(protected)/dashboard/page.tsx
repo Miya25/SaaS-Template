@@ -1,13 +1,13 @@
-import SignOutButton from '@/components/sign-out-button'
-import { authOptions } from '@/lib/auth'
-import { getCurrentUser } from '@/lib/session'
-import { redirect } from 'next/navigation'
+import SignOutButton from "@/components/sign-out-button";
+import { authOptions } from "@/lib/auth";
+import { getCurrentUser } from "@/lib/session";
+import { redirect } from "next/navigation";
 
 export default async function Page() {
-  const user = await getCurrentUser()
+  const user = await getCurrentUser();
 
   if (!user) {
-    redirect(authOptions?.pages?.signIn || '/sign-in')
+    redirect(authOptions?.pages?.signIn || "/sign-in");
   }
 
   return (
@@ -15,5 +15,5 @@ export default async function Page() {
       <h1 className="text-3xl font-semibold">Welcome, {user.name}</h1>
       <SignOutButton />
     </div>
-  )
+  );
 }

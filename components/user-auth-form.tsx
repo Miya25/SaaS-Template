@@ -1,52 +1,52 @@
-'use client'
+"use client";
 
-import * as React from 'react'
+import * as React from "react";
 
-import * as z from 'zod'
+import * as z from "zod";
 
-import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormField,
   FormItem,
   FormMessage,
   FormControl,
-} from '@/components/ui/form'
-import { Icons } from './icons'
+} from "@/components/ui/form";
+import { Icons } from "./icons";
 
-import { signIn } from 'next-auth/react'
+import { signIn } from "next-auth/react";
 
 type UserAuthFormProps = {
-  buttonText: string
-}
+  buttonText: string;
+};
 
 const formSchema = z.object({
   email: z.string().email({
-    message: 'Must be a valid email',
+    message: "Must be a valid email",
   }),
-})
+});
 
 export function UserAuthForm({ buttonText }: UserAuthFormProps) {
-  const [isLoading, setIsLoading] = React.useState<boolean>(false)
+  const [isLoading, setIsLoading] = React.useState<boolean>(false);
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      email: '',
+      email: "",
     },
-  })
+  });
 
   function onSubmit(values: z.infer<typeof formSchema>) {
-    setIsLoading(true)
+    setIsLoading(true);
 
-    console.log(values.email)
+    console.log(values.email);
 
     setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
+      setIsLoading(false);
+    }, 3000);
   }
 
   return (
@@ -91,15 +91,15 @@ export function UserAuthForm({ buttonText }: UserAuthFormProps) {
         variant="outline"
         type="button"
         disabled={isLoading}
-        onClick={() => signIn('github', { callbackUrl: '/dashboard' })}
+        onClick={() => signIn("github", { callbackUrl: "/dashboard" })}
       >
         {isLoading ? (
           <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
         ) : (
           <Icons.gitHub className="mr-2 h-4 w-4" />
-        )}{' '}
+        )}{" "}
         Github
       </Button>
     </div>
-  )
+  );
 }

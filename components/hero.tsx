@@ -1,8 +1,8 @@
-import React from 'react'
-import { Button } from './ui/button'
-import Link from 'next/link'
-import Container from './container'
-import { Icons } from './icons'
+import React from "react";
+import { Button } from "./ui/button";
+import Link from "next/link";
+import Container from "./container";
+import { Icons } from "./icons";
 
 const Hero = () => {
   return (
@@ -31,9 +31,7 @@ const Hero = () => {
               </Button>
             </Link>
             <Button variant="outline" className="px-5 py-3" asChild>
-              <Link href="https://github.dev/Miya25/SaaS-Template">
-                GitHub
-              </Link>
+              <Link href="https://github.dev/Miya25/SaaS-Template">GitHub</Link>
             </Button>
           </div>
         </div>
@@ -46,7 +44,7 @@ const Hero = () => {
         </div>
       </div>
     </Container>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
