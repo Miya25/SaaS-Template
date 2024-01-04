@@ -6,6 +6,7 @@ import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Hero from "@/components/hero";
 import Features from "@/components/Features";
+import Footers from "@/components/footer"
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <Features />
       <AboutSectionOne />
       <AboutSectionTwo />
+      <Footers />
     </Container>
   );
 }
